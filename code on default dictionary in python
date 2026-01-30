@@ -1,0 +1,14 @@
+from collections import defaultdict
+
+n, m = map(int, input().split())
+group_A = [input().strip() for _ in range(n)]
+group_B = [input().strip() for _ in range(m)]
+
+# Store positions
+pos = defaultdict(list)
+for i, word in enumerate(group_A, 1):
+    pos[word].append(i)
+
+# Print results
+for word in group_B:
+    print(*pos[word] or [-1])
