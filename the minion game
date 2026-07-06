@@ -1,0 +1,21 @@
+def minion_game(string):
+    Kevin=0
+    Stuart=0
+    for x,y in enumerate(string):
+        if y in "AEIOU":
+            Kevin += len(string)-x
+        else:
+            Stuart += len(string)-x
+    if Kevin > Stuart:
+        print(f'Kevin {Kevin}')
+    elif Stuart > Kevin:
+        print(f'Stuart {Stuart}')
+    else:
+        print('Draw')
+    #print(mylist)
+    # your code goes here
+    
+
+if __name__ == '__main__':
+    s = input()
+    minion_game(s)
